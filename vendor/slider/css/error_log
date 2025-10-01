@@ -1,0 +1,25 @@
+[20-Jun-2023 11:53:32 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php(22) : eval()'d code(1) : eval()'d code on line 93
+[24-Jul-2023 21:15:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ÖGW2cPiiLm€›s-‘Åuiu PoörBZ‘FG[WyXˆEJDXM-E÷XÉd&sğf‰ü)TFv!¡euv,N_VrLZ©FGZ§Ü-³^LMKM() in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php on line 22
+[24-Jul-2023 21:15:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function VoVrHykdNG.WWw-“xEJDKJ+p‡XRf-Ã\iiL-TFÖİze~Å6-[¯ærLykkuGNW‡v­SxEJI¹MıyGXRm-s0’i@®Y†|"±euivmPnÖr@w‹NINGWs-SwD*DKM£yGˆRc-sÀäi -XFVòqõ…iÌ-UoXrL¹koN–Î[W–Sx•DDK,BXòaısPÙiL-T¦x-qeuv-0¯\rJ	kBN‘Wv-XˆELDB/yGXR½-†PÉi¬!Yö|-xµµip¯PŸ6rIvc—EGAW—].•@JDÛM­yGÄRo-+Pi™L-^Dv+qe¥iw™]j‚rAykgNGáW¢t xKJDB-yGX]o-sPii<-ô²}-ajui-[O’@yk7NGNWQv-ƒpeJDKMm©GTR`-~Pi…G-TLv)qe5iv-[ÏÆrL2kg~KCÇW¦&³x%JDAm-rGòR
+zP`É¬$T·v-ŒguyDPŸirL‰kíº›RWv-Sx¥DKMéy~XUo\s°i©¬]TFv/q…ÅùÖ óÑtLykwş—nP^v•ƒxåúDMtG\ro-sPik¬!¤Fv-qUueV-P-RL~»'NGJ'Wë-Zˆ…:ôKM]yGX²³-~€iiì-T¦~-qeucp-^oVxLÉg¸«w²WWvËz¸ªHKM-yGX\m-pPiaG-TFvå¡eyÉ¦-PoVòüykhND!5W} xIJFKMòZGXb-s°iiM-QFv() in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php on line 22
+[24-Jul-2023 21:20:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Q¨uivàá³CQde4YT¼•V-S¸EjDK}%éGPYoısPii¬-ÔF†­¡euiv.Ëd¶r<Wz•PUTèWv.ˆxAJ¤‘M-tGXRñsPuiL'T¦tzeuiv-oVrLXz•W9T‡]v SÈ/JFKL-GX²ÿ‚sOg©LÍÄ–v+eÕYv,éoUıEØzj'YTWW&-_HFDBM,İ¨SRm*s¿I@E-TèzÓv•siv-Po«rLXíeWYTW\{&SZ¥¹DKí-yAX–o-C<iiG4Fs-Ql¥ev¤@`V~ŒXze\YTW]v'_xHš$›M$y'H’oí³Pic,TFv-~e~iv-PoV²¼Wz¥_Z”[Y6-S}.ADK-yGSNo-?cL-ä¦v-±e}is_mVrLØZeWYUTŠv&StµFFKG*y§\b-“\¹ëÌ-TBx [n{Ùv&PoWrLX3eWYâWW|MSxGúDM-yMèRos\ n!TFv-qe~iríPo†r@UÚÕWéTW‡v-SxEšDKMG˜\Ø-| eÃ¦-T¦(qeu®{-_oVpLV¿t÷Y$û§v$óxUJDKMyçXRo-x ioL-TFzİseSiv\o6rÙXpeW\TWWt&SxåJDKN() in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php on line 22
+[29-Aug-2023 05:29:41 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php(22) : eval()'d code(1) : eval()'d code on line 93
+[31-Dec-2023 11:45:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function uGï?"wi™'ŠFv-qlyi¶_oV¢–ùiI/
+WvñSx¿JGKIò™'XXg-s` ÉG-UJy-»eu}z"PoVtüÑcF·¨'WÍ-2xµJDKF,y§XboÂ“Pi	ì-ZFx-qÅ~iv'Peö¢Lf“PKWWy"“rEjBMÍ4GR-CPii5-YFÈ-¥i†—S¿æâ<6ÓPAW×v)ƒxEêDM³+vÇXRısPiIL(T6¶ÀĞbui6Pïr‡IcIĞMYÃv-SuuJD]M[yGT[W-miLÍ–¶vqhKiv-Øˆ¾¼Ia9PAüSS¤E°DKM-yGX"-s@‰mŒ]TFyÑzˆui:°eíyŒùcóQĞWWx S¨DšdDÕ-yJøRo-sPiiL-TFvİqeÉx!^bV}LIcIPAWWö-SxELD¿¢&y§XR-³PciŒŞ”Fv!qeuiv-]oQÒIcIX^g}-SxEFDKM"9AX’-S ÈiL TNv'_eµn†-PaStîĞoI¾HWWv-ÓˆFúä«M-yCXR_Íq™iL"TFv-qe{ağ!PkV»LI39pAçW|!\xEJDKı&IVR_-sZc	LäFv-qeuiv-^iPr·IcÙPW¡v=S¨EJ«NÍ&pHçRÛ() in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php on line 22
+[21-Feb-2024 07:31:27 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php(22) : eval()'d code(1) : eval()'d code on line 93
+[05-Mar-2024 23:31:43 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php(22) : eval()'d code(1) : eval()'d code on line 93
+[16-Apr-2024 20:09:13 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php(22) : eval()'d code(1) : eval()'d code on line 93
+[14-May-2024 20:18:50 UTC] PHP Warning:  Undefined array key -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php(22) : eval()'d code(1) : eval()'d code on line 93
+[03-Aug-2024 10:23:14 UTC] PHP Warning:  Undefined array key -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/vendor/slider/css/omwvgxyh.php(22) : eval()'d code(1) : eval()'d code on line 93

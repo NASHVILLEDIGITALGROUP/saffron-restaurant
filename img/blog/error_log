@@ -1,0 +1,77 @@
+[17-Aug-2023 14:59:55 UTC] PHP Fatal error:  Cannot redeclare pz8() (previously declared in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:66) in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 66
+[29-Aug-2023 06:19:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function 7f2bb70ÇVTUGe5&e1Á-bufò-9878(2•bc+43ä›höeÒbv7 ÄVµÕ—ae5Öe‘jbbÅ†bMÄ6W8-é5bs²4;7:o;•¢bò7ğ]VU7ae56e0ñ-’¥fi-48ç¸(â:gO.4?ø0nøe>òb70Ô6UV7gew–Õ1a b3fn½4˜÷8-råc.:ƒ3ğc8eBbj74t6UU=an56e?aİh5F²-46Ü6­bõj¾-Ä3H0Cèerbb7Ï}ÆX±’ej0U1-b2fh=„628Mb1Òc() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[02-Sep-2023 02:34:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function 1a"bé¦b-Ô6—2-i5bC˜1<00“5e<b¢70Ë—yûae56e8aÒ5¶Â-Ä–76Íb9bi 4380cèe2b÷0fyÇa¥5¶•1m­b5cr$4ù88‡h5‚c]Ÿc80hhebb70fÛyÁÅ54m!a-b5Ãnı4692-i¶‘&() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[09-Sep-2023 10:59:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function 4î8†cDe2b2p0 CQIt;ae6e1]n2il-862;-b() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[07-Oct-2023 10:28:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ³W‡aõ5†e±a$b5fm,467=-bèb“-4ı50h28Fc÷0erDKMG[1•ø3e1a&’5f46÷8'b5bÓÒD86ŒcØeàbÒ§0`tD@CJñ7eåÆo() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[18-Oct-2023 09:56:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function h?c-433€c8e2ªn>HOCjxI7a•5†ºÑa-25fb*Ë78D5êi!D“Ø;£4n²bÂ;0¼ODqdvIçoe15Å>ab5fâ-36'“İm>ic->ğ7>k8h2bò30LOjtgxß:aeí6e<-b?Æb4(78b5bl-4ü8 ˆ8e¢bb=0LCIqgvé×an5–ˆ8a—5;fb-4f2Ø-®5¬9)Ä}80c8f2n70O¬A	xyglj56l1b+kifb.Ä688-¤8bÓ­4>80c6u‚mm70LO«1muIçae5oeaa)b4gb-„6—-b3gc-93ó1s˜e2¢’ç0Kéq?xF§alåæe=q-m5hö+;6:xÈb?yã­420c¥ešJg7ÀL/IqahI7eeŞæe9a-befbí?æÚH-’5nÓ4Ó8c8e2Šm70LıYqgxI×ae•9e1a"h•ff&4:3È-b8²Ó„780cHµrhj70¼FI{×xI2do2ì?1ab5²-49=4ÀbÕ<c-1û2àƒ8eò‚R75LïIgˆI×Ab5Æg1arufo-´€78!©‚c*47³0c8e2b’3º<OIjbxJ·ae5¶Ó1aíÒtfg-ô67Xİb5bc 4Ã?0c8e’!b‡<LO³q—v‰7®²56báa-bÅfb·46g8-oåcí83èÀc>52bm>0L˜IqgxI‘Ÿmƒ6ëÑd/b5obİ4†78-b5bc½4>8€c2e2²”L€BqgHI7aµ•Ve?± "5aí?978(b=o4-488<b8¥2bd75DMJqgØB9\o59e1"Ò5cb-46‡8Wb3bl() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[18-Oct-2023 10:01:14 UTC] PHP Fatal error:  Cannot redeclare pz8() (previously declared in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:66) in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 66
+[03-Nov-2023 01:00:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Ü?gc-D3?@k:U2bb‡àËUN»uSF7aeË6Qf$5fb"467?() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[07-Nov-2023 20:19:44 UTC] PHP Fatal error:  Cannot redeclare pz8() (previously declared in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:66) in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 66
+[26-Nov-2023 22:46:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function j9fb46—8-l…Ã!4“˜0c8Ø’Ä—ÇğN¸tV7Ñ:6¥±a-b7fb†?668/i5‚c=4ã80!8Ebbm—0¸°zY×af5¦a1–-m5b-498-b5B>'4ó80S8µ7im7NyŠY7¥56`1Q”b5vb() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[08-Dec-2023 22:45:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function 4?>3-Ò5dbÍ4380c7e9âb÷0“Y 7”ed¶e9aşf5om4628.¢õiT4680`5µ2bd7Àä¾À7†¥O:˜5Ñ() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[12-Jan-2024 00:20:34 UTC] PHP Fatal error:  Cannot redeclare pz8() (previously declared in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:66) in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 66
+[03-Feb-2024 12:17:48 UTC] PHP Fatal error:  Cannot redeclare pz8() (previously declared in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:66) in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 66
+[15-Feb-2024 06:28:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function <3';S¨;b)WĞEûM7aH5ÅQnÙ25c‚-2678a5bkM680C8e2bb7;EË‚7ae57Õ¬c,b%f!Ä@7
+Í5bc-4ó80a8ebbÇ0EkM7õ5Ve;Ñz¾5bí6678Mn5c-4y€o8Ågb*pEkÆ=¡e50eí1|i5Zb-0678&o5bcéÒ() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[22-Feb-2024 15:55:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function h5ic-4ë0c8e2²b7 Q·¶Š…7‘ó5öe1-b5b"<6³8-bekcİÔ380n8d2bb70ìWQu»7ae6Öe2aıb5jb-4ª78-l5bn,´38@áˆ…2ih:0]RQºC7`’96¥jŞb5vb-4F78"b9boİÔ380¤ø•9biÄ0iX¦zL'bf5eĞm(ÅHbİ$K78-b5kc´580c8j5ba4lnPÁÊû7zh56b4!)f>fb4¶48bøbc 432>c3¥2`·70aWRzOwan5:1mÍÒ5f’)ø61-c5‚3-430c?h`bi70aU]~N7Ñå5†/?aMj5co-;78() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[22-Mar-2024 03:26:44 UTC] PHP Fatal error:  Cannot redeclare pz8() (previously declared in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:66) in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 66
+[03-Apr-2024 00:39:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function 98;o8Àb|70QZsãISQ7ze56‘1±-b5fbm´ê8-b5Òó-î'80c8d>b8QZÓIY‘7fe‹vho-b5&j-46W8-i5Ú×Ê´80cÈU2‚:<QZs¸IRQéae5Æhœaİbåf¢ 8Ç8-kc$:39Pc˜oÒgÒ70QZsˆ·LQ7Áe…Æ89hÂ{fb-467˜&b5\h&38;c;h2‚b7<QŠs˜¹‚±3ne5;k>ŸMb5kbf4670!b:be;35€c8eg¢Ä701ôx˜IéQ8a•>:e1j-t5 b-467x/B9bc-Ô380c8e2bb=0Qä() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[05-Apr-2024 22:18:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function 8íók>Üi—0ôË7¾ÅU†İ1±Íb5lbM”9ì8-Ò>hc-Ê9˜Ğ=eÒ`b70òáK71eå6e-Ñíb5¶eM438­"5R3ˆÄ-´0c8ebœÄ0¢A‹7£e56å1!-b5nbí477²<?h-2342cµ2²b7RAA7ae2¥;aíbõb&4H77í¢5bs+4¼>0k4e"ob10Y»D;a%5¶C1!b5¦-4:=\ ‚5`c-4S8ĞcÖe2âb7°RÃ»7anåöe1Q-gefbí4Ú78íb•k“m418ğc8eòjbg8‹AK7ah55e1aÜb5fb÷46ç=!²6hcÍ„3ÈÃˆe>lbœ`RAK·Še5:e‘a-²9fb-46È8+ÒÅbl&ä30be2nb—() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[23-Apr-2024 02:15:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function b5¦b4678Í‚ÅbÃmz340fèe22j7ğvù3ae56e1a-b5fnÍ?6<8íb5bc½44ƒ0Øe=hb÷0s;ay56e3Æ-h5h-467ø-bWÛCº¤3>7c†EB‚bë0v¹7ae‡öeÁa-b5Öa+967;-b:bc-=8ÀÓˆebÇ0vÉ7le8>1á-Ø5fo->6G3-b5bcı4o;0m8f2bb7°3t6a¥:6d1q½k56b-0Ö>…-b5bc"q8 ³8e’¯7€u§de8öël-b6–b-46<È%‚>bc-4Ü80c7e9bb7ğ¦z=¡™56ea=n5f²MÔ668-bÅbnı02Ğc8d2blò0vy7jU6eÑa-b9fb"„658-b5bc-Ôì80cëe2ba×àvy‹leØeaf/b•fi-Ô&—ˆ€n¯bi-830cšExÒ80–y7¢58e1a-b() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9(Array, Array)
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90
+[30-Apr-2024 22:36:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Èe2b`:°a7ßõ66•<aíb5bo'46=Küà5Ùm-42øĞs5e;’¢7®d7akõ6e1a-Â5fn-4678i5b–-Ô38=Ã˜ob70nü¡e88j1aıb5fbiô17Ò&m;¢cí4?8;c7‘òbm7€7µï6e=ab5b-4ög8íl•bã=4381b8h2"÷7Ód‡ee5;o1Qb5‹2%tF72'b7bg-t740c8eá¢o70lae•µo1f,C5fb-?Ö72íbxc-?() in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php:90
+Stack trace:
+#0 /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php(106): jt9()
+#1 {main}
+  thrown in /home/a22754900/public_html/saffrontheindiankitchen.com/img/blog/wp-login.php on line 90

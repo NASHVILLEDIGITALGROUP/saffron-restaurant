@@ -1,0 +1,1 @@
+!function(e){"use strict";jQuery("#ensign-nivoslider-3").nivoSlider({effect:"fade",slices:15,boxCols:8,boxRows:4,animSpeed:500,pauseTime:5e3,startSlide:0,directionNav:!0,controlNavThumbs:!0,pauseOnHover:!0,manualAdvance:!1})}();

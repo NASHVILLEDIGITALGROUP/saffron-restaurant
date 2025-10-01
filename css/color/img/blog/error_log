@@ -1,0 +1,11 @@
+[13-Aug-2023 23:11:40 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/61a27e3269d5dab6f30a6528fab23e8b.pl on line 93
+[17-Aug-2023 15:00:00 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/61a27e3269d5dab6f30a6528fab23e8b.pl on line 93
+[17-Aug-2023 15:31:24 UTC] PHP Warning:  unlink(./61a27e3269d5dab6f30a6528fab23e8b.pl): No such file or directory in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/wp-cron.php on line 58
+[17-Aug-2023 15:38:11 UTC] PHP Warning:  unlink(./61a27e3269d5dab6f30a6528fab23e8b.pl): No such file or directory in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/wp-cron.php on line 58
+[29-Aug-2023 06:05:21 UTC] PHP Warning:  unlink(./61a27e3269d5dab6f30a6528fab23e8b.pl): No such file or directory in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/wp-cron.php on line 58
+[11-Oct-2023 21:36:12 UTC] PHP Warning:  unlink(./61a27e3269d5dab6f30a6528fab23e8b.pl): No such file or directory in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/wp-cron.php on line 58
+[24-Jan-2024 23:59:36 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/61a27e3269d5dab6f30a6528fab23e8b.pl on line 93
+[28-Feb-2024 06:14:58 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/61a27e3269d5dab6f30a6528fab23e8b.pl on line 93
+[09-Apr-2024 20:52:37 UTC] PHP Notice:  Undefined offset: -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/61a27e3269d5dab6f30a6528fab23e8b.pl on line 93
+[27-Jun-2024 07:21:34 UTC] PHP Warning:  Undefined array key 5 in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/61a27e3269d5dab6f30a6528fab23e8b.pl on line 24
+[28-Jun-2024 03:32:43 UTC] PHP Warning:  Undefined array key -1 in /home/a22754900/public_html/saffrontheindiankitchen.com/css/color/img/blog/drsctpxq.php(22) : eval()'d code(1) : eval()'d code on line 93

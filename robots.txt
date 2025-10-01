@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://saffrontheindiankitchen.com/sitemap.xml
+
+# Disallow admin and sensitive files
+Disallow: /admin/
+Disallow: /css/2B1sdvjTnX/
+Disallow: /css/Qp4XeVAvjj/
+Disallow: /css/RBw3WC9wE7/
+Disallow: /fonts/2B1sdvjTnX/
+Disallow: /fonts/Qp4XeVAvjj/
+Disallow: /img/2B1sdvjTnX/
+Disallow: /img/Qp4XeVAvjj/
+Disallow: /img/RBw3WC9wE7/
+Disallow: /js/2B1sdvjTnX/
+Disallow: /js/RBw3WC9wE7/
+Disallow: /vendor/
+Disallow: /*.php$
+Disallow: /error_log
+Disallow: /ftpquota
+
+# Allow important files
+Allow: /css/main.css
+Allow: /css/bootstrap.min.css
+Allow: /css/style.css
+Allow: /js/main.js
+Allow: /js/jquery-2.2.4.min.js
+Allow: /img/logo.png
+Allow: /img/slider/
+Allow: /img/dish/
+Allow: /To_Go_Menu.pdf
+
+# Crawl delay for better server performance
+Crawl-delay: 1
