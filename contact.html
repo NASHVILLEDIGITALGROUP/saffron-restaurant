@@ -1,320 +1,166 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Contact Indian Restaurant in Nashville | Saffron The Indian Kitchen | Assembly Food Hall</title>
-        <meta name="description" content="Contact Saffron The Indian Kitchen, one of the premier Indian restaurants in Nashville. Visit us at Assembly Food Hall, 5055 Broadway Place, Nashville TN 37203. Call (615) 933-7786 or email saffrontheindiankitchen@gmail.com. Open daily 10:30AM-10PM (Fri-Sat until 12AM).">
-        <meta name="keywords" content="contact Indian restaurant Nashville, contact Indian restaurants Nashville, Assembly Food Hall contact, Nashville Indian food contact, Saffron Indian Kitchen phone, Nashville restaurant hours, Indian food Nashville location">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="Saffron The Indian Kitchen">
-        <meta name="canonical" content="https://saffrontheindiankitchen.com/contact.html">
-
-        <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendor/OwlCarousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendor/OwlCarousel/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/meanmenu.min.css">
-        <link rel="stylesheet" href="vendor/slider/css/nivo-slider.css" type="text/css" />
-        <link rel="stylesheet" href="vendor/slider/css/preview.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="style.css">
-        <script src="js/modernizr-2.8.3.min.js"></script>
         <style type="text/css">
             .mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}
+            
+            /* Mobile Responsiveness for Contact Page */
+            @media (max-width: 768px) {
+                /* Header Top Mobile */
+                .header-top-left ul {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                .header-top-left ul li {
+                    margin: 5px 0;
+                    font-size: 14px;
+                }
+                .header-top-right {
+                    text-align: center;
+                    margin-top: 10px;
+                }
+                
+                /* Header Bottom Mobile */
+                .main-menu-area {
+                    display: none;
+                }
+                .mobile-menu-area {
+                    display: block;
+                }
+                
+                /* Contact Banner Mobile */
+                .inner-page-banner-area {
+                    padding: 40px 0 20px;
+                }
+                .inner-page-banner-area h2 {
+                    font-size: 28px;
+                }
+                
+                /* Contact Content Mobile */
+                .contact-us-page-area {
+                    padding: 20px 0 !important;
+                }
+                .contact-us-page-area .row {
+                    margin: 0;
+                }
+                .contact-us-page-area .col-lg-4,
+                .contact-us-page-area .col-lg-3 {
+                    margin-bottom: 30px;
+                }
+                
+                /* Map Mobile */
+                .mapouter {
+                    height: 300px;
+                    margin-bottom: 20px;
+                }
+                .gmap_canvas {
+                    height: 300px;
+                }
+                .gmap_iframe {
+                    height: 300px !important;
+                }
+                
+                /* Opening Hours Mobile */
+                .opening-schedule li {
+                    font-size: 16px;
+                    padding: 8px 0;
+                    text-align: center;
+                    margin-left: 0 !important;
+                }
+                .opening-schedule li span {
+                    margin-left: 0 !important;
+                    display: block;
+                    margin-top: 5px;
+                }
+                
+                /* Contact Info Mobile */
+                .contact-us-left h3 {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+                .contact-us-left ul li {
+                    font-size: 16px;
+                    margin: 15px 0;
+                    text-align: center;
+                }
+                .contact-us-left ul li i {
+                    margin-right: 10px;
+                }
+                
+                /* Social Media Mobile */
+                .contact-social {
+                    text-align: center;
+                    margin: 20px 0;
+                }
+                .contact-social li {
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+                
+                /* Form Mobile */
+                .contact-form input,
+                .contact-form textarea {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    padding: 12px;
+                    font-size: 16px;
+                }
+                .contact-form button {
+                    width: 100%;
+                    padding: 15px;
+                    font-size: 18px;
+                }
+                
+                /* Footer Mobile */
+                .footer-area-top {
+                    padding: 40px 0;
+                }
+                .footer-box {
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+                .footer-social {
+                    text-align: center;
+                    margin: 20px 0;
+                }
+                .footer-social li {
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+                .footer-area-bottom {
+                    text-align: center;
+                    padding: 20px 0;
+                }
+                .footer-area-bottom p {
+                    font-size: 14px;
+                    margin: 10px 0;
+                }
+            }
+            
+            /* Extra small mobile devices */
+            @media (max-width: 480px) {
+                .header-top-left ul li {
+                    font-size: 12px;
+                }
+                .inner-page-banner-area h2 {
+                    font-size: 24px;
+                }
+                .opening-schedule li {
+                    font-size: 14px;
+                }
+                .contact-us-left ul li {
+                    font-size: 14px;
+                }
+                .mapouter {
+                    height: 250px;
+                }
+                .gmap_canvas {
+                    height: 250px;
+                }
+                .gmap_iframe {
+                    height: 250px !important;
+                }
+                .contact-form input,
+                .contact-form textarea {
+                    font-size: 14px;
+                }
+            }
         </style>
-    </head>
-    <body>
-        <!-- Add your site or application content here -->
-        <div class="wrapper">
-            <!-- Header Area Start Here -->
-           <header>                
-                <div class="header2-area">
-                    <div class="header-top-area">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <div class="header-top-left">
-                                        <ul>
-                                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:+6159337786"> 615-933-7786</a></li>
-                                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">saffrontheindiankitchen@gmail.com</a></li>
-                                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Assembly Food Hall, 5055 Broadway Place Nashville, TN 37203.</a></li>
-                                        </ul>
-                                    </div>
-                                    
-                                </div>
-                                <div  class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                                    <div class="header-top-right">
-                                        <a href="To_Go_Menu.pdf" class="btn btn-warning new-btn" download="true" >Downlaod Our Menu</a>
-                                            
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header-bottom-area" id="sticker">
-                        <div class="container">
-                            <div class="row">                         
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                                    <div class="logo-area">
-                                        <a href="index.html"><img class="img-responsive " src="img/logo.png" alt="Saffron The Indian Kitchen Logo"></a>
-                                    </div>
-                                </div>  
-                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                    <div class="main-menu-area">
-                                        <nav>
-                                            <ul>
-                                                <li><a href="index.html.bak.bak">Home</a>
-                                                </li>  
-                                                <li><a href="index.html.bak.bak#about">About Us</a>
-                                                </li>
-                                                <li><a href="index.html.bak.bak#explore">Our Menu</a>
-                                                </li>
-                                                <li ><a href="contact.html">Contact Us</a></li>
-                                                
-                                                <li ><a href="https://www.ubereats.com/store/saffron-kitchen-assembly-food-hall/HxpZMafNUXq42gVP84Tmtg?diningMode=DELIVERY">Order now</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>   
-                            </div>                          
-                        </div> 
-                    </div>
-                </div>
-                <!-- Mobile Menu Area Start -->
-                <div class="mobile-menu-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="mobile-menu">
-                                    <nav id="dropdown">
-                                        <ul>
-                                            <li><a href="index.html.bak.bak">Home</a>
-                                            </li>
-                                            <li><a href="#about">About Us</a>
-                                            </li>
-                                            <li><a href="#explore">Our Menu</a>
-                                            </li>
-                                            <li><a href="contact.html">Contact Us</a></li>
-                                            <li>
-                                                <a href="To_Go_Menu.pdf" class="btn btn-warning new-btn" download="true" >Downlaod Our Menu</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>           
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-                <!-- Mobile Menu Area End -->
-            </header>
-            <!-- Header Area End Here -->
-            <!-- Inner Page Banner Area Start Here -->
-            <div class="inner-page-banner-area">
-                <div class="container">
-                    <div class="pagination-area">
-                        <h2>Contact Us</h2>
-                        <ul>
-                            <li><a href="#">Home -</a> /</li>
-                            <li>Contact</li>
-                        </ul>
-                    </div>
-                </div>  
-            </div> 
-            <!-- Inner Page Banner Area End Here -->
-            <!-- Contact Us Page Area Start Here -->
-            <div class="contact-us-page-area section-space-bottom" style="padding: 5rem">
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=422&amp;height=400&amp;hl=en&amp;q=Assembly Food Hall 5055 Broadway Pl, Nashville, TN 37203, United States&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.fridaynightfunkin.net/">FNF PC</a></div></div>
-                    </div>
-
-                    <div  class="col-lg-4 col-md-12 col-sm-12" >
-                        <h3 class="title-bar-footer">Opening Hours</h3>
-                        <br>
-                        <ul class="opening-schedule">
-                            <li style="font-size: 18px;">
-                                Monday<span style="margin-left: 3.1rem;"> 10:30AM - 10PM</span>
-                            </li>
-                            <li  style="font-size: 18px;">Tuesday<span style="margin-left: 3rem;"> 10:30AM - 10PM</span></li>
-                            <li  style="font-size: 18px;">Wednesday <span style="margin-left: 1rem;">10:30AM - 10PM</span></li>
-                            <li  style="font-size: 18px;">Thursday<span style="margin-left: 2.1rem;"> 10:30AM - 10PM</span></li>
-                            <li  style="font-size: 18px;">Friday<span style="margin-left: 4rem;"> 10:30AM - 12AM</span></li>
-                            <li  style="font-size: 18px;">Saturday <span style="margin-left: 2.4rem;"> 10:30AM - 12AM</span></li>
-                            <li  style="font-size: 18px;">Sunday<span style="margin-left: 3.5rem;">10:30AM - 10PM</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-12 col-sm-12">
-                        <h3>GET IN TUCH</h3>
-                        <div class="contact-us-left">   
-                            <ul>
-                                <li>
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <p>615-933-7786</p>   
-                                </li>
-                                <li>
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <p>Assembly Food Hall <br> 5055 Broadway Place Nashville, TN 37203.</p> 
-                                </li>
-                                <li>
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <p>saffrontheindiankitchen@gmail.com</p>   
-                                </li>
-                                <li>
-                                    <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                    <h3>Follow Us</h3>
-                                    <ul class="contact-social">
-                                        <li><a href="https://www.facebook.com/assemblyfoodhall"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://twitter.com/Assembly_Hall"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>       
-                            </ul>
-                        </div>  
-                    </div>
-                </div>
-
-            </div>
-                  <!--    <div id="googleMap" style="width:100%; height:420px;"></div> -->
-
-                    
-                <div class="container-fluid" style="background: #d6cccc40;padding: 5rem;">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                             
-                        </div>  
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                            <div class="contact-us-right"> 
-                                <h2 class="title-bar-medium-left inner-sub-title">Send Us A Massege</h2> 
-                                <br>   
-                                <div class="contact-form"> 
-                                    <form method="post" action="mail_send.php">
-                                        <fieldset>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <input type="text" placeholder="Name*" class="form-control" name="name" id="form-name" data-error="Name field is required" required>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <input type="email" placeholder="Email*" class="form-control" name="email" id="form-email" data-error="Email field is required" required>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-                                                </div>
-                                                 <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <input type="text" placeholder="Subject*" class="form-control" name="subject" id="form-subject" data-error="Subject field is required" required>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <textarea placeholder="Message*" class="textarea form-control" name="message" id="form-message" rows="7" cols="20" data-error="Message field is required" required></textarea>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-                                                </div>
-
-                                                    <div class="col-lg-12 col-md-12 col-sm-6 col-sm-12">
-                                                        <div class="g-recaptcha" data-sitekey="6Le0uBwbAAAAAALEpkDRY_zc5eYl8MSw5b8m0Q58"></div>
-                                                    </div><br>
-                                                <div class="col-lg-4 col-md-4 col-sm-6 col-sm-12" style="margin-top: 10px;">
-                                                    <div class="form-group margin-bottom-none">
-                                                        <button type="submit" class="ghost-on-hover-btn">Send</button>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-8 col-md-8 col-sm-6 col-sm-12">
-                                                    <div class='form-response'></div>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Contact Us Page Area End Here -->
-            <!-- Footer Area Start Here -->
-            <footer>
-                <div class="footer-area-top section-space">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                <div class="footer-box">
-                                    <h3 class="title-bar-footer">About Us</h3>
-                                    <div class="footer-about">
-                                        <p>You will experience the finest food, which perfectly combines the ancient traditions and authentic flavors of India. The secret of Indian Cuisine is in the proper use of selected spices to bring out the rich flavor, aroma, and character in food.By proper use of different techniques such as roasting or frying the spices whole, or grinding them to make a paste, it is possible to draw different flavors from the same spice.</p>
-                                        <div style="font-size: 12px; font-style: italic;">
-                                Food Allergy Notice - Please be advised that food prepared here may contain these ingredients : milk, eggs, wheat, soybean, peanuts, tree nuts, fish and shellfish.
-                                    </div>
-                                    </div>
-                                    <ul class="footer-social">
-                                        <li><a href="https://www.facebook.com/Saffronthenashville" target="_blank" title="Follow us on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://www.instagram.com/saffron_indian_kitchen/" target="_blank" title="Follow us on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://www.tiktok.com/@saffrontheindiankitchen" target="_blank" title="Follow us on TikTok"><i class="fa fa-music" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://share.google/6UQdKZvD9oD7CEjGC" target="_blank" title="Visit our Google My Business"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                           
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="footer-box">
-                                    <h3 class="title-bar-footer">We Serve </h3>
-                                    <img src="img/halal.jpg" alt="Halal Certified" class="halal-img" loading="lazy" width="100" height="100">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="footer-box">
-                                    <h3 class="title-bar-footer">Opening Hours</h3>
-                                    <ul class="opening-schedule">
-                                        <li>Monday<span> 10:30AM - 10PM</span></li>
-                                        <li>Tuesday<span> 10:30AM - 10PM</span></li>
-                                        <li>Wednesday <span>10:30AM - 10PM</span></li>
-                                        <li>Thursday<span> 10:30AM - 10PM</span></li>
-                                        <li>Friday<span> 10:30AM - 12AM</span></li>
-                                        <li>Saturday <span>10:30AM - 12AM</span></li>
-                                        <li>Sunday<span>10:30AM - 10PM</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-area-bottom">
-                    <div class="container">
-                        <p>&copy; 2025 Saffron The Indian Kitchen All Rights Reserved. Managed By <a href="https://nashvilledigitalgroup.com" target="_blank">Nashville Digital Group</a></p>
-                    </div>
-                </div>
-            </footer>
-            <!-- Footer Area End Here -->
-        </div>
-        <!-- Preloader Start Here -->
-        <div id="preloader"></div>
-        <!-- Preloader End Here -->
-        <!-- jquery-->  
-        <script src='https://www.google.com/recaptcha/api.js'></script>
-        <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
-        <script src="js/plugins.js" type="text/javascript"></script>
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="vendor/slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-        <script src="vendor/slider/home.js" type="text/javascript"></script>
-        <script src="vendor/OwlCarousel/owl.carousel.min.js" type="text/javascript"></script>
-        <script src="js/jquery.meanmenu.min.js" type="text/javascript"></script>
-        <script src="js/jquery.scrollUp.min.js" type="text/javascript"></script>
-        <script src="js/jquery.counterup.min.js"></script>
-        <script src="js/waypoints.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgREM8KO8hjfbOC0R_btBhQsEQsnpzFGQ"></script>
-        <script src="js/validator.min.js" type="text/javascript"></script>
-        <script src="js/main.js" type="text/javascript"></script>
-
-    </body>
-</html>
