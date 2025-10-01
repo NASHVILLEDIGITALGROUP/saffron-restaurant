@@ -1,0 +1,25 @@
+{
+    "name": "saffron-indian-kitchen/website",
+    "description": "Saffron The Indian Kitchen restaurant website",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "echo 'Saffron Indian Kitchen website dependencies installed'"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
