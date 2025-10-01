@@ -21,11 +21,16 @@ COPY . /var/www/html/
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
-# Configure Apache
-RUN echo '<Directory /var/www/html>' > /etc/apache2/sites-available/000-default.conf \
-    && echo '    AllowOverride All' >> /etc/apache2/sites-available/000-default.conf \
-    && echo '    Require all granted' >> /etc/apache2/sites-available/000-default.conf \
-    && echo '</Directory>' >> /etc/apache2/sites-available/000-default.conf
+# Configure Apache virtual host
+RUN echo '<VirtualHost *:80>' > /etc/apache2/sites-available/000-default.conf \
+    && echo '    DocumentRoot /var/www/html' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '    ServerName localhost' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '    <Directory /var/www/html>' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '        AllowOverride All' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '        Require all granted' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '        DirectoryIndex index.html index.php' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '    </Directory>' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '</VirtualHost>' >> /etc/apache2/sites-available/000-default.conf
 
 # Expose port 80
 EXPOSE 80
