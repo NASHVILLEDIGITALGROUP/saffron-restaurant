@@ -18,18 +18,70 @@
         padding: 0 10px;
     }
     
-    /* Order Now Button Mobile Fixes - Target all buttons in slider */
+    /* Hide Hero Section Order Now Buttons on Mobile - Target exact structure */
+    
+    /* Hide the entire div containers that hold the buttons */
+    .slider-direction div[style*="text-align: center"],
+    .title-container div[style*="text-align: center"],
+    .slider-content div[style*="text-align: center"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Also target the buttons directly */
     .slider-direction button,
-    .title-container button {
-        padding: 12px 24px !important;
-        font-size: 18px !important;
-        margin: 10px auto !important;
-        display: block !important;
-        width: auto !important;
-        max-width: 280px !important;
-        border-radius: 8px !important;
-        position: relative !important;
-        top: 0 !important;
+    .title-container button,
+    .slider-content button,
+    .slider-direction a[href*="ubereats"],
+    .title-container a[href*="ubereats"],
+    .slider-content a[href*="ubereats"],
+    #slider-direction-1 button,
+    #slider-direction-2 button,
+    #slider-direction-3 button,
+    #slider-direction-1 a[href*="ubereats"],
+    #slider-direction-2 a[href*="ubereats"],
+    #slider-direction-3 a[href*="ubereats"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* 2. Navigation Menu Order Now Links */
+    .main-menu-area li a[href*="ubereats"],
+    .mobile-menu-area li a[href*="ubereats"],
+    .mobile-menu a[href*="ubereats"],
+    nav ul li a[href*="ubereats"],
+    .main-menu-area li:has(a[href*="ubereats"]),
+    .mobile-menu-area li:has(a[href*="ubereats"]),
+    nav ul li:has(a[href*="ubereats"]) {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* 3. Mobile Menu Button */
+    .mobile-menu .btn.btn-warning.new-btn[href*="ubereats"],
+    .mobile-menu-area .btn.btn-warning.new-btn[href*="ubereats"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
     /* Ensure slider content is visible */
@@ -50,13 +102,6 @@
     .title1 {
         font-size: 20px !important;
         line-height: 1.2 !important;
-    }
-    
-    .slider-direction button,
-    .title-container button {
-        padding: 10px 20px !important;
-        font-size: 16px !important;
-        max-width: 250px !important;
     }
     
     .slider-content {
