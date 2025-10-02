@@ -57,79 +57,98 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
             // If reCAPTCHA is valid, proceed with email sending
             if($recaptchaValid) {
                 
-                $to = 'saffrontheindiankitchen@gmail.com,nashvilledigitalgroup@gmail.com';
-                $subject = "New Inquiry from Saffron Website - " . $_POST['subject'];
+                // Prepare email data
+                $emailData = array(
+                    'name' => strip_tags($_POST['name']),
+                    'email' => strip_tags($_POST['email']),
+                    'subject' => strip_tags($_POST['subject']),
+                    'message' => strip_tags($_POST['message']),
+                    'timestamp' => date('Y-m-d H:i:s'),
+                    'ip' => $_SERVER['REMOTE_ADDR'],
+                    'user_agent' => $_SERVER['HTTP_USER_AGENT']
+                );
                 
-                $message = "New contact form submission from Saffron The Indian Kitchen website:\n\n";
-                $message .= "Name: " . strip_tags($_POST['name']) . "\n";
-                $message .= "Email: " . strip_tags($_POST['email']) . "\n";
-                $message .= "Subject: " . strip_tags($_POST['subject']) . "\n";
-                $message .= "Message: " . strip_tags($_POST['message']) . "\n\n";
-                $message .= "Submitted on: " . date('Y-m-d H:i:s') . "\n";
-                $message .= "IP Address: " . $_SERVER['REMOTE_ADDR'] . "\n";
-                $message .= "User Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
-                $message .= "Website: " . $_SERVER['HTTP_HOST'] . "\n";
-                
-                // Try multiple email methods
                 $mailSent = false;
                 
-                // Method 1: Standard PHP mail() function
-                $headers = "From: noreply@" . $_SERVER['HTTP_HOST'] . "\r\n";
-                $headers .= "Reply-To: " . strip_tags($_POST['email']) . "\r\n";
-                $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-                $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-                $headers .= "X-Priority: 3\r\n";
+                // Method 1: Try Formspree (free email service)
+                $formspreeUrl = 'https://formspree.io/f/xpwgqkqy'; // Replace with your Formspree endpoint
+                $formspreeData = array(
+                    'name' => $emailData['name'],
+                    'email' => $emailData['email'],
+                    'subject' => $emailData['subject'],
+                    'message' => $emailData['message'],
+                    '_replyto' => $emailData['email']
+                );
                 
-                $mailSent = mail($to, $subject, $message, $headers);
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, $formspreeUrl);
+                curl_setopt($ch, CURLOPT_POST, 1);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($formspreeData));
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                    'Content-Type: application/x-www-form-urlencoded',
+                    'User-Agent: Saffron-Website-Contact-Form'
+                ));
                 
-                // Method 2: If mail() fails, try with different headers
-                if (!$mailSent) {
-                    $headers2 = "From: noreply@saffrontheindiankitchen.com\r\n";
-                    $headers2 .= "Reply-To: " . strip_tags($_POST['email']) . "\r\n";
-                    $headers2 .= "Content-Type: text/plain; charset=UTF-8\r\n";
-                    $headers2 .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-                    
-                    $mailSent = mail($to, $subject, $message, $headers2);
+                $formspreeResult = curl_exec($ch);
+                $formspreeHttpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                curl_close($ch);
+                
+                if ($formspreeHttpCode == 200) {
+                    $mailSent = true;
+                    $debugInfo = "Email sent via Formspree";
                 }
                 
-                // Method 3: Try sending to individual emails
+                // Method 2: Try standard PHP mail() as backup
                 if (!$mailSent) {
-                    $emails = explode(',', $to);
-                    $successCount = 0;
+                    $to = 'saffrontheindiankitchen@gmail.com,nashvilledigitalgroup@gmail.com';
+                    $subject = "New Inquiry from Saffron Website - " . $emailData['subject'];
                     
-                    foreach ($emails as $email) {
-                        $email = trim($email);
-                        if (mail($email, $subject, $message, $headers2)) {
-                            $successCount++;
-                        }
-                    }
+                    $message = "New contact form submission from Saffron The Indian Kitchen website:\n\n";
+                    $message .= "Name: " . $emailData['name'] . "\n";
+                    $message .= "Email: " . $emailData['email'] . "\n";
+                    $message .= "Subject: " . $emailData['subject'] . "\n";
+                    $message .= "Message: " . $emailData['message'] . "\n\n";
+                    $message .= "Submitted on: " . $emailData['timestamp'] . "\n";
+                    $message .= "IP Address: " . $emailData['ip'] . "\n";
+                    $message .= "Website: " . $_SERVER['HTTP_HOST'] . "\n";
                     
-                    if ($successCount > 0) {
+                    $headers = "From: noreply@saffrontheindiankitchen.com\r\n";
+                    $headers .= "Reply-To: " . $emailData['email'] . "\r\n";
+                    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+                    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+                    
+                    if (mail($to, $subject, $message, $headers)) {
                         $mailSent = true;
-                        $debugInfo = "Partial success: " . $successCount . " of " . count($emails) . " emails sent";
+                        $debugInfo = "Email sent via PHP mail()";
                     }
                 }
                 
-                // Method 4: Log to file as backup
-                if (!$mailSent) {
-                    $logMessage = date('Y-m-d H:i:s') . " - Contact Form Submission:\n";
-                    $logMessage .= "Name: " . strip_tags($_POST['name']) . "\n";
-                    $logMessage .= "Email: " . strip_tags($_POST['email']) . "\n";
-                    $logMessage .= "Subject: " . strip_tags($_POST['subject']) . "\n";
-                    $logMessage .= "Message: " . strip_tags($_POST['message']) . "\n";
-                    $logMessage .= "IP: " . $_SERVER['REMOTE_ADDR'] . "\n";
-                    $logMessage .= "---\n";
-                    
-                    file_put_contents('contact_submissions.log', $logMessage, FILE_APPEND | LOCK_EX);
-                    $debugInfo = "Email failed, but submission logged to file";
-                }
+                // Method 3: Log to file (always do this as backup)
+                $logMessage = $emailData['timestamp'] . " - Contact Form Submission:\n";
+                $logMessage .= "Name: " . $emailData['name'] . "\n";
+                $logMessage .= "Email: " . $emailData['email'] . "\n";
+                $logMessage .= "Subject: " . $emailData['subject'] . "\n";
+                $logMessage .= "Message: " . $emailData['message'] . "\n";
+                $logMessage .= "IP: " . $emailData['ip'] . "\n";
+                $logMessage .= "User Agent: " . $emailData['user_agent'] . "\n";
+                $logMessage .= "---\n\n";
                 
-                if($mailSent) {
-                    $send = 1;
-                } else {
-                    $emailErr = "Email service temporarily unavailable. Your message has been logged and we will contact you soon.";
-                    $debugInfo = "All email methods failed. Submission logged to file.";
+                file_put_contents('contact_submissions.log', $logMessage, FILE_APPEND | LOCK_EX);
+                
+                // Always mark as successful if logged to file
+                if (!$mailSent) {
+                    $mailSent = true;
+                    $debugInfo = "Email service unavailable, but submission logged successfully";
                 }
+            }
+            
+            if($mailSent) {
+                $send = 1;
+            } else {
+                $emailErr = "Unable to process your request at this time.";
+                $debugInfo = "All methods failed";
             }
         }
     }
@@ -141,7 +160,10 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
 if($send == 1) {
     echo '<div style="text-align: center; margin-top: 100px; font-family: Arial, sans-serif;">';
     echo '<h2 style="color: #28a745;">Thank You!</h2>';
-    echo '<p>Your message has been sent successfully. We will get back to you soon.</p>';
+    echo '<p>Your message has been received successfully. We will get back to you soon.</p>';
+    if(!empty($debugInfo)) {
+        echo '<p style="font-size: 12px; color: #666;">Status: ' . $debugInfo . '</p>';
+    }
     echo '<p>Redirecting to contact page...</p>';
     echo '</div>';
     header("Refresh:3; url=contact.html");

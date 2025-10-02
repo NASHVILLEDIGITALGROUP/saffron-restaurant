@@ -1,0 +1,23 @@
+<!-- Backup Contact Form using Formspree -->
+<!-- This can be used as an alternative if the PHP form fails -->
+<form action="https://formspree.io/f/xpwgqkqy" method="POST" style="display: none;" id="backup-form">
+    <input type="hidden" name="name" id="backup-name">
+    <input type="hidden" name="email" id="backup-email">
+    <input type="hidden" name="subject" id="backup-subject">
+    <input type="hidden" name="message" id="backup-message">
+    <input type="hidden" name="_replyto" id="backup-replyto">
+    <input type="hidden" name="_subject" value="New Contact Form Submission - Saffron Website">
+</form>
+
+<script>
+// JavaScript to submit backup form if PHP fails
+function submitBackupForm(formData) {
+    document.getElementById('backup-name').value = formData.name;
+    document.getElementById('backup-email').value = formData.email;
+    document.getElementById('backup-subject').value = formData.subject;
+    document.getElementById('backup-message').value = formData.message;
+    document.getElementById('backup-replyto').value = formData.email;
+    
+    document.getElementById('backup-form').submit();
+}
+</script>
