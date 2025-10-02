@@ -70,21 +70,65 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
                 $message .= "User Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
                 $message .= "Website: " . $_SERVER['HTTP_HOST'] . "\n";
                 
-                // Improved headers for better email delivery
+                // Try multiple email methods
+                $mailSent = false;
+                
+                // Method 1: Standard PHP mail() function
                 $headers = "From: noreply@" . $_SERVER['HTTP_HOST'] . "\r\n";
                 $headers .= "Reply-To: " . strip_tags($_POST['email']) . "\r\n";
                 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
                 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
                 $headers .= "X-Priority: 3\r\n";
                 
-                // Send email
                 $mailSent = mail($to, $subject, $message, $headers);
+                
+                // Method 2: If mail() fails, try with different headers
+                if (!$mailSent) {
+                    $headers2 = "From: noreply@saffrontheindiankitchen.com\r\n";
+                    $headers2 .= "Reply-To: " . strip_tags($_POST['email']) . "\r\n";
+                    $headers2 .= "Content-Type: text/plain; charset=UTF-8\r\n";
+                    $headers2 .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+                    
+                    $mailSent = mail($to, $subject, $message, $headers2);
+                }
+                
+                // Method 3: Try sending to individual emails
+                if (!$mailSent) {
+                    $emails = explode(',', $to);
+                    $successCount = 0;
+                    
+                    foreach ($emails as $email) {
+                        $email = trim($email);
+                        if (mail($email, $subject, $message, $headers2)) {
+                            $successCount++;
+                        }
+                    }
+                    
+                    if ($successCount > 0) {
+                        $mailSent = true;
+                        $debugInfo = "Partial success: " . $successCount . " of " . count($emails) . " emails sent";
+                    }
+                }
+                
+                // Method 4: Log to file as backup
+                if (!$mailSent) {
+                    $logMessage = date('Y-m-d H:i:s') . " - Contact Form Submission:\n";
+                    $logMessage .= "Name: " . strip_tags($_POST['name']) . "\n";
+                    $logMessage .= "Email: " . strip_tags($_POST['email']) . "\n";
+                    $logMessage .= "Subject: " . strip_tags($_POST['subject']) . "\n";
+                    $logMessage .= "Message: " . strip_tags($_POST['message']) . "\n";
+                    $logMessage .= "IP: " . $_SERVER['REMOTE_ADDR'] . "\n";
+                    $logMessage .= "---\n";
+                    
+                    file_put_contents('contact_submissions.log', $logMessage, FILE_APPEND | LOCK_EX);
+                    $debugInfo = "Email failed, but submission logged to file";
+                }
                 
                 if($mailSent) {
                     $send = 1;
                 } else {
-                    $emailErr = "Failed to send email. Please try again or contact us directly.";
-                    $debugInfo = "Mail function returned false";
+                    $emailErr = "Email service temporarily unavailable. Your message has been logged and we will contact you soon.";
+                    $debugInfo = "All email methods failed. Submission logged to file.";
                 }
             }
         }
