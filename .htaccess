@@ -56,3 +56,14 @@
     Header unset ETag
 </IfModule>
 FileETag None
+
+# Security: Prevent access to .env file
+<Files ".env">
+    Require all denied
+</Files>
+
+# Security: Prevent access to config.php (optional - can be accessed if needed)
+# Uncomment if you want to block direct access to config.php
+# <Files "config.php">
+#     Require all denied
+# </Files>

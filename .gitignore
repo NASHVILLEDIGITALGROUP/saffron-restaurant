@@ -1,0 +1,71 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+contact_submissions.log
+error_log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Docker
+docker-compose.override.yml
+
+# Backup files
+*.bak
+*.backup
+*_backup.*
+
+# Suspicious PHP files (security - these are empty files that should be removed)
+# Note: Legitimate PHP files like mail_send.php, index.php, etc. should be kept
+05wbavjd.php
+06abwk2q.php
+0daj4n9o.php
+0umqwk0s.php
+2dn9yvqy.php
+3kuslyr0.php
+3yn99mzs.php
+5kj1rum0.php
+73q859hr.php
+8nygvc6s.php
+9edyqhr5.php
+bupq1nsl.php
+c06xpu1g.php
+dm9n50yz.php
+dzh6lx1p.php
+ehdg35ky.php
+fap30izt.php
+fkmqronp.php
+fzdxnz0y.php
+gtq39ru8.php
+h3a45rfh.php
+m8y5n4rx.php
+obra6ict.php
+rubstkne.php
+rwou8pik.php
+sumoqyrz.php
+tms43wfr.php
+tx6esu14.php
+x5lxuubm.php
+yfjn2x32.php
+zju6344g.php
+zu28zcn2.php
+

@@ -1,7 +1,23 @@
 <?php
-// Production environment settings
-ini_set('display_errors', 0); // Hide errors in production
-error_reporting(0);
+/**
+ * Contact Form Handler - Saffron Restaurant Website
+ * 
+ * Securely processes contact form submissions with reCAPTCHA verification
+ * 
+ * Security Features:
+ * - Environment-based configuration (no hardcoded secrets)
+ * - Input sanitization
+ * - reCAPTCHA verification
+ * - Error handling without exposing sensitive information
+ */
+
+// Load configuration
+require_once __DIR__ . '/config.php';
+
+// Ensure config is loaded
+if (!defined('SAFFRON_CONFIG_LOADED')) {
+    die('Configuration error. Please ensure config.php is properly configured.');
+}
 
 $send = 0;
 $emailErr = '';
@@ -24,16 +40,17 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
             $emailErr = "Please enter a valid email address";
         } else {
             
-            // reCAPTCHA verification (with fallback)
+            // reCAPTCHA verification (with secure configuration)
             $recaptchaValid = false;
             
             if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-                require_once "recaptchalib.php";
-                
-                // Your secret key
-                $secret = "6Le0uBwbAAAAAKJPiq02exawKpQme3l9mPZ3_Tln";
+                require_once __DIR__ . '/recaptchalib.php';
                 
                 try {
+                    // Securely get reCAPTCHA secret key from environment
+                    // This prevents secret key exposure in source code
+                    $secret = getRecaptchaSecret();
+                    
                     $reCaptcha = new ReCaptcha($secret);
                     $response = $reCaptcha->verifyResponse(
                         $_SERVER["REMOTE_ADDR"],
@@ -44,11 +61,16 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
                         $recaptchaValid = true;
                     } else {
                         $emailErr = "reCAPTCHA verification failed. Please try again.";
-                        $debugInfo = "reCAPTCHA Error: " . (isset($response->errorCodes) ? implode(', ', $response->errorCodes) : 'Unknown error');
+                        // Don't expose detailed error codes to users (security best practice)
+                        $debugInfo = "reCAPTCHA verification failed";
+                        error_log("reCAPTCHA Error: " . (isset($response->errorCodes) ? implode(', ', $response->errorCodes) : 'Unknown error'));
                     }
                 } catch (Exception $e) {
+                    // Don't expose configuration errors to users
                     $emailErr = "reCAPTCHA verification error. Please try again.";
-                    $debugInfo = "reCAPTCHA Exception: " . $e->getMessage();
+                    $debugInfo = "Configuration error";
+                    // Log detailed error for administrators
+                    error_log("reCAPTCHA Exception: " . $e->getMessage());
                 }
             } else {
                 $emailErr = "Please complete the reCAPTCHA verification";
@@ -57,15 +79,16 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
             // If reCAPTCHA is valid, proceed with email sending
             if($recaptchaValid) {
                 
-                // Prepare email data
+                // Prepare email data with improved sanitization
+                // Using htmlspecialchars instead of strip_tags for better security
                 $emailData = array(
-                    'name' => strip_tags($_POST['name']),
-                    'email' => strip_tags($_POST['email']),
-                    'subject' => strip_tags($_POST['subject']),
-                    'message' => strip_tags($_POST['message']),
+                    'name' => htmlspecialchars(trim($_POST['name']), ENT_QUOTES, 'UTF-8'),
+                    'email' => filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL),
+                    'subject' => htmlspecialchars(trim($_POST['subject']), ENT_QUOTES, 'UTF-8'),
+                    'message' => htmlspecialchars(trim($_POST['message']), ENT_QUOTES, 'UTF-8'),
                     'timestamp' => date('Y-m-d H:i:s'),
-                    'ip' => $_SERVER['REMOTE_ADDR'],
-                    'user_agent' => $_SERVER['HTTP_USER_AGENT']
+                    'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
+                    'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown'
                 );
                 
                 $mailSent = false;
@@ -126,6 +149,14 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
                 }
                 
                 // Method 3: Log to file (always do this as backup)
+                // SECURITY: Log file should be outside web root in production
+                // For now, using web root but should be moved to ../logs/ directory
+                $logDir = __DIR__ . '/logs';
+                if (!is_dir($logDir)) {
+                    @mkdir($logDir, 0750, true); // Create logs directory if it doesn't exist
+                }
+                $logFile = $logDir . '/contact_submissions.log';
+                
                 $logMessage = $emailData['timestamp'] . " - Contact Form Submission:\n";
                 $logMessage .= "Name: " . $emailData['name'] . "\n";
                 $logMessage .= "Email: " . $emailData['email'] . "\n";
@@ -135,7 +166,13 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
                 $logMessage .= "User Agent: " . $emailData['user_agent'] . "\n";
                 $logMessage .= "---\n\n";
                 
-                file_put_contents('contact_submissions.log', $logMessage, FILE_APPEND | LOCK_EX);
+                // Attempt to write to logs directory, fallback to current directory if needed
+                if (is_dir($logDir) && is_writable($logDir)) {
+                    @file_put_contents($logFile, $logMessage, FILE_APPEND | LOCK_EX);
+                } else {
+                    // Fallback to current directory (less secure but ensures logging works)
+                    @file_put_contents(__DIR__ . '/contact_submissions.log', $logMessage, FILE_APPEND | LOCK_EX);
+                }
                 
                 // Always mark as successful if logged to file
                 if (!$mailSent) {
