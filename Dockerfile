@@ -23,7 +23,7 @@ RUN echo '<IfModule mod_headers.c>' > /etc/apache2/conf-available/security-heade
     && echo '    Header set X-Frame-Options "SAMEORIGIN"' >> /etc/apache2/conf-available/security-headers.conf \
     && echo '    Header set X-XSS-Protection "1; mode=block"' >> /etc/apache2/conf-available/security-headers.conf \
     && echo '    Header set Referrer-Policy "strict-origin-when-cross-origin"' >> /etc/apache2/conf-available/security-headers.conf \
-    && echo '    Header set Content-Security-Policy "default-src '\''self'\''; script-src '\''self'\'' '\''unsafe-inline'\'' https://www.google.com https://www.gstatic.com https://cdn.gravitec.net https://maps.googleapis.com; style-src '\''self'\'' '\''unsafe-inline'\''; frame-ancestors '\''self'\'';"' >> /etc/apache2/conf-available/security-headers.conf \
+    && echo '    Header set Content-Security-Policy "default-src '\''self'\''; script-src '\''self'\'' '\''unsafe-inline'\'' https://www.google.com https://www.gstatic.com https://cdn.gravitec.net https://maps.googleapis.com; style-src '\''self'\'' '\''unsafe-inline'\'' https://fonts.googleapis.com; font-src '\''self'\'' https://fonts.gstatic.com; connect-src '\''self'\'' https://cdn.gravitec.net https://www.google.com; frame-ancestors '\''self'\'';"' >> /etc/apache2/conf-available/security-headers.conf \
     && echo '</IfModule>' >> /etc/apache2/conf-available/security-headers.conf \
     && a2enconf security-headers
 
