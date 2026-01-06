@@ -41,6 +41,19 @@ RUN echo '<DirectoryMatch "^/.*/(RBw3WC9wE7|2B1sdvjTnX|Qp4XeVAvjj)/">' > /etc/ap
     && echo '</DirectoryMatch>' >> /etc/apache2/conf-available/block-malware-dirs.conf \
     && a2enconf block-malware-dirs
 
+# Block common exploit file patterns and WordPress paths
+RUN echo '<IfModule mod_rewrite.c>' > /etc/apache2/conf-available/block-exploits.conf \
+    && echo '    RewriteEngine On' >> /etc/apache2/conf-available/block-exploits.conf \
+    && echo '    # Block common exploit file names' >> /etc/apache2/conf-available/block-exploits.conf \
+    && echo '    RewriteCond %{REQUEST_URI} \.(php|phtml|php3|php4|php5|phps|phar)$ [NC]' >> /etc/apache2/conf-available/block-exploits.conf \
+    && echo '    RewriteCond %{REQUEST_URI} ^/(0x|1|222|403|404|abcd|ahax|akcc|atomlib|black|bolt|buy|chosen|cyber|defaults|edit|fx|install|luuf|mah|mm|new|php|themes|tmp|up|uploaded_script|server|alfav4\.1-tesla|asasx|bolt|buy|chosen|cyber|edit|fx|luuf|mah|mm|new|php|themes|tmp|up|uploaded_script)\.php$ [NC,OR]' >> /etc/apache2/conf-available/block-exploits.conf \
+    && echo '    RewriteCond %{REQUEST_URI} ^/wp-(admin|content|includes)/ [NC,OR]' >> /etc/apache2/conf-available/block-exploits.conf \
+    && echo '    RewriteCond %{REQUEST_URI} ^/admin/ [NC,OR]' >> /etc/apache2/conf-available/block-exploits.conf \
+    && echo '    RewriteCond %{REQUEST_URI} ^/vendor/composer/ [NC]' >> /etc/apache2/conf-available/block-exploits.conf \
+    && echo '    RewriteRule .* - [F,L]' >> /etc/apache2/conf-available/block-exploits.conf \
+    && echo '</IfModule>' >> /etc/apache2/conf-available/block-exploits.conf \
+    && a2enconf block-exploits
+
 # Set proper permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html \
