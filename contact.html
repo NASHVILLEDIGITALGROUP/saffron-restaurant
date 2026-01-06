@@ -246,7 +246,19 @@
             /* Map styles for contact page */
             .mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}
         </style>
-        <script src="https://cdn.gravitec.net/storage/fd6e76d98f0cdcee5c6836c4ff9891b2/client.js" async></script>
+        <!-- Gravitec push notifications - with error handling -->
+        <script>
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.gravitec.net/storage/fd6e76d98f0cdcee5c6836c4ff9891b2/client.js';
+            script.async = true;
+            script.onerror = function() {
+                // Silently fail if Gravitec script doesn't load
+                console.warn('Gravitec push notification script failed to load');
+            };
+            document.head.appendChild(script);
+        })();
+        </script>
         <script src="js/modernizr-2.8.3.min.js"></script>
     </head>
     <body>

@@ -1,3 +1,54 @@
+# ============================================
+# SECURITY HEADERS - PREVENT MALWARE
+# ============================================
+
+# Prevent PHP execution in suspicious directories
+<DirectoryMatch "^/.*/(RBw3WC9wE7|2B1sdvjTnX|Qp4XeVAvjj)/">
+    Require all denied
+</DirectoryMatch>
+
+# Block access to suspicious PHP files (random string patterns)
+<FilesMatch "\.(php|phtml|php3|php4|php5|phps|phar)$">
+    <If "%{REQUEST_URI} =~ m#/[0-9a-z]{8}\.php$#">
+        Require all denied
+    </If>
+    <If "%{REQUEST_URI} =~ m#/[A-Za-z0-9]{16}/#">
+        Require all denied
+    </If>
+</FilesMatch>
+
+# Disable PHP execution in asset directories (js, css, fonts, img)
+<DirectoryMatch "^/.*/(js|css|fonts|img)/">
+    <FilesMatch "\.php$">
+        Require all denied
+    </FilesMatch>
+</DirectoryMatch>
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://cdn.gravitec.net https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; frame-ancestors 'self';"
+</IfModule>
+
+# Prevent directory browsing
+Options -Indexes
+
+# Block suspicious user agents
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} (libwww-perl|wget|python|nikto|curl|scan|java|winhttp|clshttp|loader) [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} (<|>|'|%0A|%0D|%27|%3C|%3E|%00) [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} (;|<|>|'|"|\)|\(|%0A|%0D|%22|%27|%28|%3C|%3E|%00).*(libwww-perl|wget|python|nikto|curl|scan|java|winhttp|clshttp|loader) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# ============================================
+# EXISTING REWRITE RULES
+# ============================================
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
@@ -6,6 +57,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.html [L]
 </IfModule>
+
 RewriteEngine On
 RewriteCond %{HTTP_HOST} saffrontheindiankitchen\.com [NC]
 RewriteCond %{SERVER_PORT} 80

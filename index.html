@@ -323,7 +323,19 @@
                 }
             }
         </style>
-        <script src="https://cdn.gravitec.net/storage/fd6e76d98f0cdcee5c6836c4ff9891b2/client.js" async></script>
+        <!-- Gravitec push notifications - with error handling -->
+        <script>
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.gravitec.net/storage/fd6e76d98f0cdcee5c6836c4ff9891b2/client.js';
+            script.async = true;
+            script.onerror = function() {
+                // Silently fail if Gravitec script doesn't load
+                console.warn('Gravitec push notification script failed to load');
+            };
+            document.head.appendChild(script);
+        })();
+        </script>
         
         <!-- Google My Business Integration -->
         <meta name="google-site-verification" content="your-google-verification-code">
